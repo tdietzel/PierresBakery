@@ -37,8 +37,17 @@ namespace BakeryStock.Tests
     public void GetsInitialAmount_ReturnsInitialAmount_Int()
     {
       Pastry newOrder = new Pastry(5);
-      int total = newOrder.CalculateTotal();
+      int total = newOrder.Price * newOrder.Quantity;
       Assert.AreEqual(10, total);
+    }
+    [TestMethod]
+    public void GetsTotalCost_ReturnsTotalCost_Int()
+    {
+      int orderAmount = 8;
+      Pastry newOrder = new Pastry(orderAmount);
+      int total = newOrder.CalculateTotal();
+
+      Assert.AreEqual(12, total);
     }
   }
 }
