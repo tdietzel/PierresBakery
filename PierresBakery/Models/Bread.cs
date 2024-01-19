@@ -9,5 +9,10 @@ namespace BakeryStock.Models
     {
       Quantity = numOfLoaves;
     }
+
+    public int CalculateTotal()
+    {
+      return Price * Quantity;
+    }
   }
 }
