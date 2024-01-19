@@ -1,6 +1,6 @@
 using System;
 
-namespace ExampleName
+namespace BakeryUI
 {
   class Program
   {

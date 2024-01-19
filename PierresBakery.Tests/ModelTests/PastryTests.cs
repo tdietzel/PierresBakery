@@ -1,10 +1,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ExampleName.Models;
+using BakeryStock.Models;
 
-namespace ProjectName.Tests
+namespace BakeryStock.Tests
 {
   [TestClass]
-  public class ClassNameTests
+  public class PastryTests
   {
     [TestMethod]
     public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()

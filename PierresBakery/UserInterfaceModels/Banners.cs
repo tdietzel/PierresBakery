@@ -1,4 +1,4 @@
-namespace ShapeTracker.UserInterfaceModels
+namespace PierresBakery.UserInterfaceModels
 {
   class WelcomeBanner
   {
