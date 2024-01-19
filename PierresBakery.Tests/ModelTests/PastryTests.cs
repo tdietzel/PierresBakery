@@ -19,5 +19,12 @@ namespace BakeryStock.Tests
       int price = newOrder.Price;
       Assert.AreEqual(2, price);
     }
+    [TestMethod]
+    public void GetQuantityNum_ReturnsQuantityNum_Int()
+    {
+      Pastry newOrder = new Pastry();
+      int quantity = newOrder.Quantity;
+      Assert.AreEqual(0, quantity);
+    }
   }
 }
