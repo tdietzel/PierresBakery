@@ -9,7 +9,7 @@ namespace BakeryStock.Tests
     [TestMethod] // Test #1
     public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
     {
-      Pastry newOrder = new Pastry(0);
+      Pastry newOrder = new Pastry(0, 0, 0);
 
       Assert.AreEqual(typeof(Pastry), newOrder.GetType());
     }
@@ -17,7 +17,7 @@ namespace BakeryStock.Tests
     [TestMethod] // Test #2
     public void GetPriceNum_ReturnsPriceNum_Int()
     {
-      Pastry newOrder = new Pastry(0);
+      Pastry newOrder = new Pastry(0, 0, 0);
       int price = newOrder.Price;
 
       Assert.AreEqual(2, price);
@@ -26,7 +26,7 @@ namespace BakeryStock.Tests
     [TestMethod] // Test #3
     public void GetQuantityNum_ReturnsQuantityNum_Int()
     {
-      Pastry newOrder = new Pastry(0);
+      Pastry newOrder = new Pastry(0, 0, 0);
       int quantity = newOrder.Quantity;
 
       Assert.AreEqual(0, quantity);
@@ -36,7 +36,7 @@ namespace BakeryStock.Tests
     public void SetQuantityNum_SetsQuantityNum_Int()
     {
       int orderAmount = 7;
-      Pastry newOrder = new Pastry(orderAmount);
+      Pastry newOrder = new Pastry(orderAmount, 0, 0);
 
       Assert.AreEqual(orderAmount, newOrder.Quantity);
     }
@@ -44,7 +44,7 @@ namespace BakeryStock.Tests
     [TestMethod] // Test #5
     public void GetsInitialAmount_ReturnsInitialAmount_Int()
     {
-      Pastry newOrder = new Pastry(5);
+      Pastry newOrder = new Pastry(5, 0, 0);
       int total = newOrder.Price * newOrder.Quantity;
 
       Assert.AreEqual(10, total);
@@ -54,7 +54,7 @@ namespace BakeryStock.Tests
     public void GetsTotalCost_ReturnsTotalCost_Int()
     {
       int orderAmount = 8;
-      Pastry newOrder = new Pastry(orderAmount);
+      Pastry newOrder = new Pastry(orderAmount, 0, 0);
       int total = newOrder.CalculateTotal();
 
       Assert.AreEqual(12, total);

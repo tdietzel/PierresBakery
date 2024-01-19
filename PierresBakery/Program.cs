@@ -9,7 +9,7 @@ namespace BakeryUI
     static void Main()
     {
       Bread breadPriceCheck = new Bread(0);
-      Pastry pastryPriceCheck = new Pastry(0);
+      Pastry pastryPriceCheck = new Pastry(0, 0, 0);
       Console.BackgroundColor = ConsoleColor.Cyan;
       Console.ForegroundColor = ConsoleColor.Black;
       Console.WriteLine(WelcomeBanner.Welcome);
@@ -39,15 +39,24 @@ namespace BakeryUI
       Console.ResetColor();
       Bread newBreadOrder = new Bread(int.Parse(Console.ReadLine()));
       Console.ForegroundColor = ConsoleColor.Green;
-      Console.WriteLine("Enter amount of Pastries:");
+      Console.WriteLine("Enter amount of Donuts:");
       Console.ResetColor();
-      Pastry newPastryOrder = new Pastry(int.Parse(Console.ReadLine()));
+      int totalDonuts = int.Parse(Console.ReadLine());
+      Console.ForegroundColor = ConsoleColor.Green;
+      Console.WriteLine("Enter amount of CinnamonRolls:");
+      Console.ResetColor();
+      int totalCinnamonRolls = int.Parse(Console.ReadLine());
+      Console.ForegroundColor = ConsoleColor.Green;
+      Console.WriteLine("Enter amount of Croissants:");
+      Console.ResetColor();
+      int totalCroissants = int.Parse(Console.ReadLine());
+      Pastry newPastryOrder = new Pastry(totalDonuts, totalCinnamonRolls, totalCroissants);
       Console.BackgroundColor = ConsoleColor.White;
       Console.ForegroundColor = ConsoleColor.Black;
       Console.WriteLine(GoodbyeBanner.Receipt);
       Console.WriteLine("\tPierre's Bakery");
       Console.WriteLine("\t{0} loaves of bread: ${1}", newBreadOrder.Quantity, newBreadOrder.CalculateTotal());
-      Console.WriteLine("\t{1} pastries: ${1}", newPastryOrder.Quantity, newPastryOrder.CalculateTotal());
+      Console.WriteLine("\t{0} pastries: ${1}", newPastryOrder.Quantity, newPastryOrder.CalculateTotal());
       Console.ForegroundColor = ConsoleColor.Red;
       Console.WriteLine("\tTotal Due: ${0}", (newBreadOrder.CalculateTotal() + newPastryOrder.CalculateTotal()));
       Console.ResetColor();

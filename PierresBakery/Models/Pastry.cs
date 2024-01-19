@@ -7,9 +7,9 @@ namespace BakeryStock.Models
     public int Price { get; } = 2;
     public int Quantity { get; set;}
 
-    public Pastry(int numOfPastries)
+    public Pastry(int numOfDonuts, int numOfCinnamonRolls, int numOfCroissants)
     {
-      Quantity = numOfPastries;
+      Quantity = numOfDonuts + numOfCinnamonRolls + numOfCroissants;
     }
 
     public int CalculateTotal()
