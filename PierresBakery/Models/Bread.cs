@@ -2,22 +2,17 @@ using System;
 
 namespace BakeryStock.Models
 {
-  public class Bread
+  public class Bread : BakeryItem
   {
-    public int Price { get; } = 5;
-    public int Quantity { get; set; }
-
     public Bread(int numOfLoaves)
     {
       Quantity = numOfLoaves;
+      Price = 5;
     }
 
-    public int CalculateTotal()
+    protected override int Discount()
     {
-      int initialAmount = Quantity * Price;
-      int eligibleDiscount = (int)Math.Floor((decimal)Quantity / 3);
-      int totalCost = initialAmount - (eligibleDiscount * Price);
-      return totalCost;
+      return 3;
     }
   }
 }
