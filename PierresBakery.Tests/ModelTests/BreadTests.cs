@@ -7,9 +7,10 @@ namespace BakeryStock.Tests
   public class BreadTests
   {
     [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
-      // Tests will go here
+      Bread newOrder = new Bread();
+      Assert.AreEqual(typeof(Bread), newOrder.GetType());
     }
   }
 }
