@@ -1,4 +1,4 @@
-# *PROJECT NAME*
+# *Pierre's Bakery*
 #### By Trent Dietzel
 
 ## Table of Contents
@@ -12,12 +12,9 @@
 - [Contact](#contact)
 
 ## About
-*ABOUT SECTION*
+**Bakery Console Application**
 
-The primary functionality of the application is *FILL IN*...:
-- 
-- 
-- 
+The primary functionality of the application is a simple console-based bakery ordering system. Users can interact with the application to place orders for bread and pastries, and the system calculates the total cost based on the quantity ordered, considering any applicable discounts.
 
 ## Technologies Used
 - **Language**: C#
@@ -29,8 +26,10 @@ The primary functionality of the application is *FILL IN*...:
 - **Build Tool**: MSBuild
 
 ## Features
-- **FEATURE**: 
-- **FEATURE**: 
+- Display of current prices for bread and pastries with associated discounts.
+- User input for the number of loaves of bread and pastries they want to purchase.
+- Calculation of the total cost, factoring in quantity-based discounts.
+- Presentation of a receipt with detailed information about the order.
 
 ## Installation
 
@@ -38,11 +37,11 @@ Follow these steps to set up the project locally:
 1. Open Git BASH [Download Link](https://gitforwindows.org/)
 2. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/tdietzel/*PROJECT NAME*
+   git clone https://github.com/tdietzel/Pierres_Bakery
    ```
 3. Open the project directory:
    ```bash
-   cd *PROJECT NAME*
+   cd Pierres_Bakery
    ```
 4. Open in a code editor like __Visual Studio Code__.
 5. In the command line, run the command ``` dotnet run ``` to compile and execute the console application. Since this is a console application, you'll interact with it through text commands in your terminal.
