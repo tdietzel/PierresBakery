@@ -1,3 +1,5 @@
+using System;
+
 namespace BakeryStock.Models
 {
   public class Bread
@@ -12,7 +14,10 @@ namespace BakeryStock.Models
 
     public int CalculateTotal()
     {
-      return Price * Quantity;
+      int initialAmount = Quantity * Price;
+      int eligibleDiscount = (int)Math.Floor((decimal)Quantity / 3);
+      int totalCost = initialAmount - (eligibleDiscount * Price);
+      return totalCost;
     }
   }
 }

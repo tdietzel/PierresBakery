@@ -36,12 +36,19 @@ namespace BakeryStock.Tests
     [TestMethod]
     public void GetsInitialAmount_ReturnsInitialAmount_Int()
     {
-      int orderAmount = 5;
+      Bread newOrder = new Bread(5);
+      int total = newOrder.Price * newOrder.Quantity;
+
+      Assert.AreEqual(25, total);
+    }
+    [TestMethod]
+    public void GetsTotalCost_ReturnsTotalCost_Int()
+    {
+      int orderAmount = 7;
       Bread newOrder = new Bread(orderAmount);
-      int price = newOrder.Price;
       int total = newOrder.CalculateTotal();
 
-      Assert.AreEqual(orderAmount * price, total);
+      Assert.AreEqual(25, total);
     }
   }
 }
