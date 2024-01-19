@@ -3,11 +3,10 @@ namespace PierresBakery.UserInterfaceModels
   class WelcomeBanner
   {
     public static string Welcome { get; } = @"
-  
        ___     __  __      ___   _____     __   ___ __  __  ___ __     __          ___ __     
   |  ||__ |   /  `/  \|\/||__     |/  \   |__)||__ |__)|__)|__ /__`   |__) /\ |__/|__ |__)\ / 
   |/\||___|___\__,\__/|  ||___    |\__/   |   ||___|  \|  \|___.__/   |__)/~~\|  \|___|  \ |  
-                                                                                              
+    
     ";
   }
 
@@ -26,6 +25,7 @@ namespace PierresBakery.UserInterfaceModels
      __   ___  __   ___    __  ___ 
     |__) |__  /  ` |__  | |__)  |  
     |  \ |___ \__, |___ | |     |                      
+    
     ";
     public static string Goodbye { get; } = @"
   
