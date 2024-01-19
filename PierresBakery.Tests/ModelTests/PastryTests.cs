@@ -33,5 +33,12 @@ namespace BakeryStock.Tests
       Pastry newOrder = new Pastry(orderAmount);
       Assert.AreEqual(orderAmount, newOrder.Quantity);
     }
+    [TestMethod]
+    public void GetsInitialAmount_ReturnsInitialAmount_Int()
+    {
+      Pastry newOrder = new Pastry(5);
+      int total = newOrder.CalculateTotal();
+      Assert.AreEqual(10, total);
+    }
   }
 }

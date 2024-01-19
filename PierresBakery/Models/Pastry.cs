@@ -9,5 +9,10 @@ namespace BakeryStock.Models
     {
       Quantity = numOfPastries;
     }
+
+    public int CalculateTotal()
+    {
+      return Price * Quantity;
+    }
   }
 }
