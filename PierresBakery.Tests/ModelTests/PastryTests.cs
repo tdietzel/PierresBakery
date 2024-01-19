@@ -7,9 +7,10 @@ namespace BakeryStock.Tests
   public class PastryTests
   {
     [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
     {
-      // Tests will go here
+      Pastry newOrder = new Pastry();
+      Assert.AreEqual(typeof(Pastry), newOrder.GetType());
     }
   }
 }
